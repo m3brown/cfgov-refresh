@@ -85,7 +85,8 @@ describe( 'simple-table-row-links', function() {
     expect( window.location ).to.equal( 'http://www.example.info' );
   } );
 
-  it( 'should not navigate to new location when link clicked', function() {
+  it( 'should not navigate to new location when non link row cell clicked',
+  function() {
     simpleTableRowLinks.init();
     triggerClickEvent( nonLinkRowCellDom );
     expect( window.location ).to.equal( 'http://www.example.com' );
