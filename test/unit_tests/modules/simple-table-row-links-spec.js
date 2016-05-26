@@ -67,6 +67,8 @@ describe( 'simple-table-row-links', function() {
     } );
 
     window.location = 'http://www.example.com';
+
+    simpleTableRowLinks.init();
   } );
 
   afterEach( function() {
@@ -74,20 +76,18 @@ describe( 'simple-table-row-links', function() {
   } );
 
   it( 'should navigate to new location when link row cell clicked', function() {
-    simpleTableRowLinks.init();
     triggerClickEvent( linkRowCellDom );
     expect( window.location ).to.equal( 'http://www.example.info' );
   } );
 
-  it( 'should navigate to new location when link clicked', function() {
-    simpleTableRowLinks.init();
+  it( 'should bubble click events to the parent element when a link is clicked',
+  function() {
     triggerClickEvent( linkDom );
     expect( window.location ).to.equal( 'http://www.example.info' );
   } );
 
   it( 'should not navigate to new location when non link row cell clicked',
   function() {
-    simpleTableRowLinks.init();
     triggerClickEvent( nonLinkRowCellDom );
     expect( window.location ).to.equal( 'http://www.example.com' );
   } );
