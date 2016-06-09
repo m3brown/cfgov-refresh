@@ -214,6 +214,7 @@ urlpatterns = [
     url(r'^oah-api/county/', include_if_app_enabled('countylimits','countylimits.urls')),
     url(r'^eregs-api/', include_if_app_enabled('regcore', 'regcore.urls')),
     url(r'^eregulations/', include_if_app_enabled('regulations','regulations.urls')),
+    url(r'^testango/', include_if_app_enabled('testango','testango.urls')),
 
     url(r'^find-a-housing-counselor/$', TemplateView.as_view(template_name='find_a_housing_counselor.html')),
     url(r'^save-hud-counselors-list/$', HousingCounselorPDFView.as_view()),

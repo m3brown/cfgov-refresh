@@ -82,6 +82,7 @@ OPTIONAL_APPS = [
     {'import': 'regulations', 'apps': ('regulations',)},
     {'import': 'picard', 'apps': ('picard',)},
     {'import': 'publish-eccu', 'apps': ('publish-eccu',)},
+    {'import': 'testango', 'apps': ('testango',)},
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -322,6 +323,7 @@ LEGACY_APP_URLS={ 'cal':False,
                  'regcore':True,
                  'regulations':True,
                  'countylimits':True,
+                 'testango':True,
                  'noticeandcomment':True}
 
 # DJANGO HUD API
